@@ -60,7 +60,7 @@ results[0].show()
 
 ---
 
-## 🖼️ Resized Display Output
+### 🖼️ Resized Display Output
 
 import matplotlib.pyplot as plt
 import cv2
