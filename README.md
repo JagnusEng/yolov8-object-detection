@@ -45,9 +45,79 @@ from ultralytics import YOLO
 
 model = YOLO("yolov8n.pt")  # Nano model (fast and lightweight)
 model.train(data="coco128.yaml", epochs=3, imgsz=640)
+
 Trained on 640x640 images for 3 epochs
 Used yolov8n.pt, a lightweight model good for fast prototyping
-🧷 Real-World Image Test
+
+
+
+
+
+## 🧷 Real-World Image Test
+- After training, I uploaded and tested my own image (with 2 dogs):
+
+from google.colab import files
+uploaded = files.upload()  # Upload any image
+
+image_path = next(iter(uploaded))
+results = model(image_path)
+results[0].show()
+
+---
+
+## 🚀 Tech Stack
+
+| Tool/Library   | Purpose                        |
+|----------------|--------------------------------|
+| YOLOv8         | Object detection (Ultralytics) |
+| OpenCV         | Image processing and loading   |
+| Matplotlib     | Image visualization            |
+| Google Colab   | Cloud-based Python notebook    |
+| COCO           | Dataset for training/testing   |
+
+---
+
+## 📂 Dataset Used
+
+- **COCO 2017 Validation Set** (`val2017.zip`)  
+  Downloaded and extracted directly into the Colab environment.  
+  Source: [http://images.cocodataset.org/zips/val2017.zip](http://images.cocodataset.org/zips/val2017.zip)
+
+- **COCO128.yaml**  
+  A smaller version of the COCO dataset provided by Ultralytics, ideal for fast training.
+
+---
+
+## 🧪 Model Training
+
+```python
+from ultralytics import YOLO
+
+model = YOLO("yolov8n.pt")  # Nano model (fast and lightweight)
+model.train(data="coco128.yaml", epochs=3, imgsz=640)
+
+Trained on 640x640 images for 3 epochs
+Used yolov8n.pt, a lightweight model good for fast prototyping
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 🧷 Real-World Image Test
 After training, I uploaded and tested my own image (with 2 dogs):
 
 
