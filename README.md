@@ -62,6 +62,7 @@ results[0].show()
 
 ### 🖼️ Resized Display Output
 
+```python
 import matplotlib.pyplot as plt
 import cv2
 
